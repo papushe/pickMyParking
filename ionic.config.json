@@ -1,0 +1,8 @@
+{
+  "name": "pickMyParking",
+  "app_id": "453f4d69",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
