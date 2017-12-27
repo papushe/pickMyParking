@@ -1,3 +1,104 @@
-page-tabs {
+.tabbar, .tabs-ios, .tabs-md , .tabs-wp{
+  .tab-button-icon {
+    background-repeat:no-repeat;
+    background-position:center;
+    height:24px;
+    width:24px;
+    background-size:contain;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    &:before {
+      display:none;
+    }
+  }
+}
 
+.tabs-ios {
+  a[aria-selected=false]{
+    .tab-button-icon[ng-reflect-name=parking], .tab-button-icon[aria-label="parking"] {
+      background-image: url(../assets/imgs/parking_inactive.png);
+    }
+    .tab-button-icon[ng-reflect-name=config], .tab-button-icon[aria-label=config] {
+      background-image: url(../assets/imgs/config_inactive.png);
+    }
+    .tab-button-icon[ng-reflect-name=avatar], .tab-button-icon[aria-label=avatar] {
+      background-image: url(../assets/imgs/avatar_inactive.png);
+    }
+  }
+  a[aria-selected=true] {
+    //führ eventuellen text
+    //span {
+    //color: #f00; //whatever colour you want to use for the text
+    //}
+    .tab-button-icon[ng-reflect-name=parking], .tab-button-icon[aria-label=parking] {
+      background-image: url(../assets/imgs/parking_active.png);
+    }
+    .tab-button-icon[ng-reflect-name=config], .tab-button-icon[aria-label=config] {
+      background-image: url(../assets/imgs/config_active.png);
+    }
+    .tab-button-icon[ng-reflect-name=avatar], .tab-button-icon[aria-label=avatar] {
+      background-image: url(../assets/imgs/avatar_active.png);
+    }
+  }
+}
+
+.tabs-md {
+  a[aria-selected=false]{
+    .tab-button-icon[ng-reflect-name=parking], .tab-button-icon[aria-label="parking"] {
+      background-image: url(../assets/imgs/parking_inactive.png);
+    }
+    .tab-button-icon[ng-reflect-name=config], .tab-button-icon[aria-label=config] {
+      background-image: url(../assets/imgs/config_inactive.png);
+    }
+    .tab-button-icon[ng-reflect-name=avatar], .tab-button-icon[aria-label=avatar] {
+      background-image: url(../assets/imgs/avatar_inactive.png);
+    }
+  }
+
+  a[aria-selected=true] {
+    //führ eventuellen text
+    //span {
+    //color: #f00; //whatever colour you want to use for the text
+    //}
+    .tab-button-icon[ng-reflect-name=parking], .tab-button-icon[aria-label=parking] {
+      background-image: url(../assets/imgs/parking_active.png);
+    }
+    .tab-button-icon[ng-reflect-name=config], .tab-button-icon[aria-label=config] {
+      background-image: url(../assets/imgs/config_active.png);
+    }
+    .tab-button-icon[ng-reflect-name=avatar], .tab-button-icon[aria-label=avatar] {
+      background-image: url(../assets/imgs/avatar_active.png);
+    }
+  }
+}
+
+.tabs-wp {
+  a[aria-selected=false]{
+    .tab-button-icon[ng-reflect-name=parking], .tab-button-icon[aria-label="parking"] {
+      background-image: url(../assets/imgs/parking_inactive.png);
+    }
+    .tab-button-icon[ng-reflect-name=config], .tab-button-icon[aria-label=config] {
+      background-image: url(../assets/imgs/config_inactive.png);
+    }
+    .tab-button-icon[ng-reflect-name=avatar], .tab-button-icon[aria-label=avatar] {
+      background-image: url(../assets/imgs/avatar_inactive.png);
+    }
+  }
+
+  a[aria-selected=true] {
+    //führ eventuellen text
+    //span {
+    //color: #f00; //whatever colour you want to use for the text
+    //}
+    .tab-button-icon[ng-reflect-name=parking], .tab-button-icon[aria-label=parking] {
+      background-image: url(../assets/imgs/parking_active.png);
+    }
+    .tab-button-icon[ng-reflect-name=config], .tab-button-icon[aria-label=config] {
+      background-image: url(../assets/imgs/config_active.png);
+    }
+    .tab-button-icon[ng-reflect-name=avatar], .tab-button-icon[aria-label=avatar] {
+      background-image: url(../assets/imgs/avatar_active.png);
+    }
+  }
 }

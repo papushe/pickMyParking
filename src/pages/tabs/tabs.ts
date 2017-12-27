@@ -15,11 +15,15 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class TabsPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  tab1Root:string;
+  tab2Root:string;
+  tab3Root:string;
+
+  constructor() {
+    this.tab1Root = 'PickAParkingPage';
+    this.tab2Root = 'CreateMyParkingPage';
+    this.tab3Root = 'ProfilePage';
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad TabsPage');
-  }
 
 }
