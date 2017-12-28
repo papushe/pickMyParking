@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage } from 'ionic-angular';
+import {USER_LIST} from "../../mocks/users/users";
 
 /**
  * Generated class for the ProfilePage page.
@@ -15,11 +16,14 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class ProfilePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+
+  user = USER_LIST[Math.floor(Math.random() * (2-0) + 0)];
+
+  constructor() {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad ProfilePage');
+    console.log(this.user);
   }
 
 }

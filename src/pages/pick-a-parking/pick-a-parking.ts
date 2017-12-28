@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {IonicPage} from 'ionic-angular';
+import {USER} from "../../models/user/user.interface";
+import {USER_LIST} from "../../mocks/users/users";
 
 /**
  * Generated class for the PickAParkingPage page.
@@ -8,6 +10,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
  * Ionic pages and navigation.
  */
 
+declare var google:any;
+
 @IonicPage()
 @Component({
   selector: 'page-pick-a-parking',
@@ -15,11 +19,13 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class PickAParkingPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  userList:USER[] = USER_LIST;
+
+  constructor() {
+
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad PickAParkingPage');
   }
-
 }

@@ -14,24 +14,9 @@
 
 
 <ion-content padding>
+
   <img src="assets/imgs/pickMyParking.png" alt="logo">
 
-  <ion-card>
-    <ion-card-content>
-      <ion-item>
-        <ion-label floating>Email</ion-label>
-        <ion-input type="email"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label floating>Password</ion-label>
-        <ion-input type="password"></ion-input>
-      </ion-item>
-    </ion-card-content>
-    <ion-row>
-      <div>
-        <button ion-button color="secondary" (click)="navigateToPage('RegisterPage')">Register</button>
-        <button ion-button (click)="navigateToPage('TabsPage')">Login</button>
-      </div>
-    </ion-row>
-  </ion-card>
+  <app-login-form></app-login-form>
+
 </ion-content>

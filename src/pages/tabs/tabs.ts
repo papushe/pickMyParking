@@ -21,7 +21,7 @@ export class TabsPage {
 
   constructor() {
     this.tab1Root = 'PickAParkingPage';
-    this.tab2Root = 'CreateMyParkingPage';
+    this.tab2Root = 'MessagesPage';
     this.tab3Root = 'ProfilePage';
   }
 
