@@ -1,10 +1,10 @@
-export interface USER {
+export interface Profile {
   key?:string;
   firstName:string;
   lastName:string;
   email:string;
-  // position: Geolocation;
   price:number;
   availability:string
   avatar:string;
+  parkingPlace?:string;
 }

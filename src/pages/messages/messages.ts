@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { IonicPage} from 'ionic-angular';
+import {IonicPage, NavController, NavParams} from 'ionic-angular';
 import {MESSAGE_LIST} from "../../mocks/messages/messages";
 import {MESSAGE} from "../../models/messages/message.interface";
+import {Profile} from "../../models/profile/profile.interface";
 
 /**
  * Generated class for the CreateMyParkingPage page.
@@ -17,10 +18,11 @@ import {MESSAGE} from "../../models/messages/message.interface";
 })
 export class MessagesPage {
 
-
   messageList:MESSAGE[] = MESSAGE_LIST;
+  profile:Profile;
 
-  constructor() {
+  constructor(private navCtrl: NavController,private navParams: NavParams) {
+    this.profile = this.navParams.get('profile');
   }
 
   ionViewDidLoad() {

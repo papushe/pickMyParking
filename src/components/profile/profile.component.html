@@ -1,0 +1,57 @@
+<form #profileForm="ngForm" novalidate>
+  <ion-card>
+    <ion-card-content>
+      <ion-item>
+        <ion-label floating>First Name</ion-label>
+        <ion-input [(ngModel)]="profile.firstName"
+                   [value]="profile.firstName"
+                   type="text"
+                   name="firstName"
+                   #firstName="ngModel"
+                   required></ion-input>
+      </ion-item>
+      <div padding *ngIf="firstName.invalid && firstName.dirty">
+        <span class="global__input-error">Must enter First Name</span>
+      </div>
+      <ion-item>
+        <ion-label floating>Last Name</ion-label>
+        <ion-input [(ngModel)]="profile.lastName"
+                   [value]="profile.lastName"
+                   type="text"
+                   name="lastName"
+                   #lastName="ngModel"
+                   required></ion-input>
+      </ion-item>
+      <div padding *ngIf="lastName.invalid && lastName.dirty">
+        <span class="global__input-error">Must enter Last Name</span>
+      </div>
+      <ion-item>
+        <ion-label floating>Price ₪</ion-label>
+        <ion-input [(ngModel)]="profile.price"
+                   [value]="profile.price"
+                   type="number"
+                   name="price"
+                   #price="ngModel"
+                   required></ion-input>
+      </ion-item>
+      <div padding *ngIf="price.invalid && price.dirty">
+        <span class="global__input-error">Must enter Price</span>
+      </div>
+      <ion-item>
+        <ion-label floating>Parking Place</ion-label>
+        <ion-input (click)="showAddressModal()"
+                   [(ngModel)]="profile.parkingPlace"
+                   [value]="profile.parkingPlace"
+                   type="text"
+                   name="parkingPlace"
+                   #parkingPlace="ngModel"
+                   required></ion-input>
+      </ion-item>
+      <div padding *ngIf="parkingPlace.invalid && parkingPlace.dirty">
+        <span class="global__input-error">Must enter Parking Place</span>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <button ion-button (click)="saveProfile()" [disabled]="profileForm.invalid">Save / Update</button>
+</form>

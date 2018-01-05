@@ -1,27 +1,30 @@
-
 <ion-header>
   <ion-navbar>
-    <ion-buttons right>
+    <ion-title>Pick A Parking</ion-title>
+    <ion-buttons end>
       <button ion-button icon-only>
         <ion-icon name="ios-notifications" color="dark"></ion-icon>
       </button>
     </ion-buttons>
-    <ion-title>Pick A Parking</ion-title>
   </ion-navbar>
 </ion-header>
 
-
-
 <ion-content padding>
   <ion-list>
-    <ion-item *ngFor="let user of userList">
-      <ion-avatar item-left>
-        <img [src]="user.avatar" alt="Avatar">
-      </ion-avatar>
-      <h2>{{user.firstName +' '+ user.lastName}}</h2>
-      <p class="availability"> {{user.availability}}</p>
-      <p>{{user.price | currency : "₪"}}</p>
+    <ion-item>
+      <ion-input (click)="showAddressModal()" [(ngModel)]="address" type="text" placeholder="Pick an address"></ion-input>
     </ion-item>
   </ion-list>
+
+  <button ion-button clear class="searchInMyCurrentPlace" (click)="pickMyPlace()">Search in my current place</button>
+  <p *ngIf="noPlace">{{noPlace}}</p>
+  <ion-list *ngIf="parkingList?.length > 0">
+    <ion-item *ngFor="let parking of parkingList" (click)="selectProfile(parking)">
+      <h2><label>Name</label> {{parking.firstName +' '+ parking.lastName}}</h2>
+      <p><label>Price</label> {{parking.price | currency : "₪"}}</p>
+      <p><label>Parking Place</label> {{parking.parkingPlace}}</p>
+    </ion-item>
+  </ion-list>
+
 </ion-content>
 
